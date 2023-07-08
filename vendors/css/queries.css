@@ -20,12 +20,42 @@
         padding: 60px 0;
     } */
 }
-/*small tablets to big tablets from 768 to 1023px*/
-@media only screen and (max-width: 1023px) {
+/*small tablets to big tablets from 768 to 1049px*/
+/* @media only screen and (max-width: 1049px) {
+    
+} */
+@media only screen and (max-width: 991.5px) {
+    header .logo {
+        margin-top: 2px;
+    }
+    .navbar-brand {
+        padding-bottom: 0;
+    }
+    .navbar {
+        padding: 0 !important;
+    }
+    .nav {
+        margin: 0;
+        flex-direction: column;
+    }
+    .hero-text-box{
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 1049px) {
+    .long-copy {
+        text-align: center;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .works-step div {
+        padding-top: 2.5px;
+    }
     .long-copy {
         width: 90%;
-        margin-left: 5%;
-        margin-right: 10%;
+        margin-left: 0;
+        margin-right: 0;
     }
     body {
         font-size: 18px;
@@ -90,6 +120,12 @@
 }
 /*small phones to small tablets from 481 to 797px*/
 @media only screen and (max-width: 797px) {
+    .section-plans ul {
+        padding-left: 0;
+    }
+    /* .box {
+        margin-left: auto !important;
+    } */
     html {
         font-size: 16px;
     }
@@ -119,7 +155,7 @@
         height: 40px;
         width: 40px;
         margin-right: 15px;
-        padding: 4px;
+        padding-top: 2.5px;
         font-size: 100%;
     }
     .works-step p{
@@ -155,6 +191,15 @@
 
 /*small phones from 0 to 480px*/
 @media only screen and (max-width: 490px) {
+    .btn {
+        font-size: 0.8rem;
+        /* width: 100%; */
+    }
+    h1 {
+        width: 60%;
+        margin-bottom: 0;
+        padding-top: 12%;
+    }
     .works-step:first-child p{
         padding-top: 0px;
     }
@@ -169,15 +214,14 @@
         width: 50%;
         height: auto;
     }
+    header .logo{
+        height: 70px;
+    }
 }
 
 /*Reduction in height*/
 @media only screen and (max-height: 500px) {
-    header .hero-text-box {
-        margin-top: 10%;
-    }
     header .logo{
-        height: auto;
-        width: 20%;
+        height: 70px;
     }
 }

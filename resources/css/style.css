@@ -10,14 +10,22 @@ html {
     color: #555;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 20px !important;
     text-rendering: optimizeLegibility;
-    overflow: auto;
+    /* overflow: auto; */
+}
+
+html,body {
+    overflow-x: hidden;
 }
 
 .row {
-    max-width: 1140px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0 !important;
+}
+
+.col {
+    flex:none;
 }
 
 header {
@@ -27,12 +35,14 @@ header {
     font-family: sans-serif;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 h1 {
+    width: 70%;
     margin-top: 0px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fff !important;
     font-size: 240%;
     font-weight: 300;
     text-transform: uppercase;
@@ -41,11 +51,13 @@ h1 {
 }
 
 .hero-text-box {
+    z-index: 0;
     position: absolute;
     width: 1140px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 }
 
 /* .btn {
@@ -107,19 +119,28 @@ input[type=submit]:active {
     margin-top: 20px;
 }
 
-.main-nav {
+.navbar.bg-body-tertiary {
+    background-color: transparent !important;
+}
+
+.navbar-collapse {
+    z-index: 10;
+}
+
+.nav {
+    z-index: 10;
     float: right;
     list-style: none;
     margin-top: 55px;
 }
 
-.main-nav li {
+.nav li {
     display: inline-block;
     margin-left: 40px;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
+.nav li a:link,
+.nav li a:visited {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -129,8 +150,8 @@ input[type=submit]:active {
     transition: border-bottom 0.7s;
 }
 
-.main-nav li a:hover,
-.main-nav li a:active {
+.nav li a:hover,
+.nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
 
@@ -140,13 +161,16 @@ section {
 
 h2 {
     font-family: sans-serif;
-    font-weight: 300;
+    font-weight: 300 !important;
     text-transform: uppercase;
     font-size: 180%;
     word-spacing: 2px;
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 30px;
     letter-spacing: 2px;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 h2:after {
@@ -157,12 +181,6 @@ h2:after {
     width: 200px;
     margin: 0 auto;
     margin-top: 30px;
-}
-
-.long-copy {
-    line-height: 145%;
-    width: 70%;
-    margin-left: 15%;
 }
 
 .box {
@@ -195,6 +213,8 @@ h3 {
 }
 
 .meals-showcase {
+    padding-left: 0;
+    margin: 0;
     list-style: none;
     width: 100%;
 }
@@ -237,6 +257,10 @@ h3 {
     visibility: hidden;
 }
 
+.navbar-toggler-icon {
+    filter: invert(100%);
+}
+
 .section-meals {
     padding: 0;
     /* margin-bottom: 670px; */
@@ -247,6 +271,12 @@ h3 {
 .section-features .long-copy {
     margin-top: 40px;
     margin-bottom: 30px;
+    line-height: 145%;
+    text-align: center;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: 0;
 }
 
 .section-steps {
@@ -292,7 +322,7 @@ h3 {
     text-align: center;
     /* display: inline-block; */
     float: left;
-    padding: 5px;
+    padding: 0px 5px 5px 5px;
     margin-right: 20px;
 }
 
@@ -358,8 +388,16 @@ blockquote {
     padding: 2%;
     font-style: italic;
     line-height: 145%;
-    margin-top: 30px;
+    margin-top: 30px !important;
     position: relative;
+}
+blockquote:before {
+    content: '\201C';
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -3;
 }
 
 cite {
@@ -373,15 +411,6 @@ cite img {
     border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;
-}
-
-blockquote:before {
-    content: '\201C';
-    font-size: 500%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -3;
 }
 
 .section-plans {
@@ -411,6 +440,7 @@ blockquote:before {
 }
 
 .plan-price-meal {
+    margin-bottom: 0;
     font-size: 80%;
 }
 
@@ -421,6 +451,7 @@ blockquote:before {
 
 /*list-style to chenge the bullet points*/
 .plan-box ul {
+    padding: 0;
     list-style: none;
 }
 
@@ -452,12 +483,17 @@ blockquote:before {
 }
 
 .section-form {
-    font-size: smaller;
+    /* font-size: large; */
     padding: 3%;
     overflow: hidden;
 }
+
+.section-form .row {
+    padding: 0 2.5% 0 2.5%;
+}
+
 .contact-form {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
