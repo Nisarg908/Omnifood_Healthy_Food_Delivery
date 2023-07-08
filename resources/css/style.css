@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
     background-color: #fff;
     color: #555;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     font-weight: 300;
     font-size: 20px !important;
     text-rendering: optimizeLegibility;
@@ -32,7 +32,7 @@ header {
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
     height: 100vh;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -160,7 +160,7 @@ section {
 }
 
 h2 {
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     font-weight: 300 !important;
     text-transform: uppercase;
     font-size: 180%;
@@ -188,7 +188,7 @@ h2:after {
 }
 
 h3 {
-    font-family: sans-serif;
+    font-family: sans-serif !important;
     font-weight: 100;
     text-transform: uppercase;
     font-size: 110%;
